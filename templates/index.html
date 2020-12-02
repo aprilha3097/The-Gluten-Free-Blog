@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row justify-content-md-center">
+<div class="card col-sm-6">
+  <div class="card-body center-align">
+    <p class="card-text">Want to Join?<br>Sign up now to join the community of Gluten Free cooks!</p>
+    <a href="#" class="btn btn-primary">Sign Up</a>
+  </div>
+</div>
+</div>
+
+    {% for recipe in recipes %}
+    <div class="row justify-content-md-center">
+        <div class="col-sm-10">
+            <div class="card border-info">
+                <div class="card-body">
+                    <h5 class="card-title">{{ recipe.recipe_name }}</h5>
+                    <p class="card-text">{{ recipe.recipe_description }}</p>
+                    <a href="{ url_for('')}" class="btn btn-primary">View Recipe</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}

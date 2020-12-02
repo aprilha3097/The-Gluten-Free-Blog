@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row">
+<div class="card col-sm-12">
+  <img src="#" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Want to Join? Sign Up to join the community.</p>
+    <a href="#" class="btn btn-primary ">Sign Up</a>
+  </div>
+</div>
+</div>
+
+{% for receip in recipes %}
+    <div class="row justify-content-md-center">
+        <div class="col-sm-10">
+            <div class="card border-info">
+                <div class="card-body">
+                    <h5 class="card-title">{{ recipes.recipe_name }}</h5>
+                    <p class="card-text">{{ recipes.recipe_description }}</p>
+                    <a href="" class="btn btn-primary">View Recipe</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+{% endblock%}

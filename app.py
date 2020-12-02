@@ -1,6 +1,7 @@
 import os
 from flask import Flask, render_template
 from flask_pymongo import PyMongo
+from bson.objectid import ObjectId
 if os.path.exists("env.py"):
     import env
 
@@ -17,6 +18,12 @@ mongo = PyMongo(app)
 def index():
     recipes = list(mongo.db.recipes.find())
     return render_template("index.html", recipes=recipes)
+
+
+@app.route("/view_recipe/<recipe_id>")
+def view_recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("view_recipe.html", recipe=recipe)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,29 @@
+{% extends  "base.html" %}
+{% block content %}
+
+<!-- User Registration Form -->
+<div class="row justify-content-md-center">
+    <form class="col-sm-5" method="POST" action="">
+        <div class="card-panel">
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="username" name="username" type="text" class="validate" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required/>
+                <label for="username">Username</label>
+            </div>
+        </div>
+        <!--Password input-->
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="password" minlength="5" maxlength="15" name="password" type="password" class="validate" pattern="^[a-zA-Z0-9]{5,15}$" required />
+                <label for="password">Password</label>
+            </div>
+        </div>
+        <div class="row">
+            <!--register button-->
+            <button type="submit" class="col s12 btn-large light-blue darken-4 text-shadow">Register</button>
+        </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

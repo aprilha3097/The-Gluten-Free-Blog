@@ -33,4 +33,26 @@
   </div>
 </div>
 
+
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+        Ingredients:
+        <ul>
+            {% for ingredients in recipe.ingredients %}
+                <li>{{ingredients}}</li>
+            {% endfor %}
+        </ul>
+    
+        </div>
+        <div class="col-sm-6">
+        Method:
+        <ul>
+            {% for method in recipe.methods %}
+                <li>{{method}}</li>
+            {% endfor %}
+        </ul>
+        </div>
+    </div>
+    </div>
 {% endblock %}

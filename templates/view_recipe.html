@@ -39,17 +39,17 @@
         <div class="col-sm-4">
         Ingredients:
         <ul>
-            {% for ingredients in recipe.ingredients %}
-                <li>{{ingredients}}</li>
+            {% for ingredient in recipe.ingredients %}
+                <li>{{ingredient}}</li>
             {% endfor %}
         </ul>
     
         </div>
         <div class="col-sm-6">
-        Method:
+        Directions:
         <ul>
-            {% for method in recipe.methods %}
-                <li>{{method}}</li>
+            {% for direction in recipe.directions %}
+                <li>{{direction}}</li>
             {% endfor %}
         </ul>
         </div>

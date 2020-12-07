@@ -1,5 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
+    <header>
+        <div class="row justify-content-md-center">
+        <div class="card col-sm-6" style="width: 8rem;">
+        <div class="card-body center-align">
+            <img src="https://www.deliciousalchemy.com/wp-content/uploads/2017/04/VictoriaSpongeDecorateBanner-3.jpg" alt="" class="card-img-top">
+            <hr>
+            <p class="card-text">Want to Join?<br>Sign up now to join the community of Gluten Free cooks!</p>
+            <a href="#" class="btn btn-primary">Sign Up</a>
+        </div>
+        </div>
+        </div>
+    </header>
 
     {% for recipe in recipes %}
     {% if loop.index % 2 != 0 %}
@@ -9,7 +21,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{ recipe.recipe_name }}</h5>
                 <p class="card-text">{{ recipe.recipe_description }}</p>
-                <a href="#" class="btn btn-primary">View Recipe</a>
+                <a href="{{ url_for('view_recipe', recipe_id=recipe._id)}}" class="btn btn-primary">View Recipe</a>
                 <p>Post Created By: <em>Enter Username Here</em></p> 
             </div>
         </div>
@@ -20,7 +32,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{ recipe.recipe_name }}</h5>
                 <p class="card-text">{{ recipe.recipe_description }}</p>
-                <a href="#" class="btn btn-primary">View Recipe</a>
+                <a href="{{ url_for('view_recipe', recipe_id=recipe._id)}}" class="btn btn-primary">View Recipe</a>
                 <p>Post Created By: <em>Enter Username Here</em></p> 
             </div>
         </div>

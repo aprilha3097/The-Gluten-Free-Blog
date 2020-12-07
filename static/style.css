@@ -1,0 +1,9 @@
+.outline {
+    border: 2px solid black;
+}
+
+.uppercase {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}

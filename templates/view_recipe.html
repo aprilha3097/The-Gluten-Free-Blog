@@ -1,6 +1,36 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3>This works</h3>
+<h3>{{ recipe.recipe_name }}</h3>
+<p>{{ recipe.recipe_description }}</p>
+<p>Post Created By: <em>Enter Username Here</em></p> 
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm outline">
+        <div class="uppercase">
+            Serves
+        </div>
+        <br>
+        {{recipe.serves}}
+    </div>
+    <div class="col-sm outline">
+        <div class="uppercase">
+            Prep Time
+        </div>
+        <br>
+        <strong>Hours:</strong> {{recipe.prep_time.hours}}
+        <strong>Minutes:</strong> {{recipe.prep_time.minutes}}
+    </div>
+    <div class="col-sm outline">
+        <div class="uppercase">
+            Total Time
+        </div>
+        <br>
+        <strong>Hours:</strong> {{recipe.total_time.hours}}
+        <strong>Minutes:</strong> {{recipe.total_time.minutes}}
+    </div>
+  </div>
+</div>
 
 {% endblock %}

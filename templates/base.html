@@ -16,21 +16,32 @@
 </head>
 
 <body>
-	<header>
-    <!-- Top Navbar -->
+	    <!-- Top Navbar -->
 		<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
 			<div class="container">
-				<a class="navbar-brand" href="{{ url_for('index') }}">The Gluten Free Cookbook</a>
+				<a class="navbar-brand" href="#">The Gluten Free Cookbook</a>
 			</div>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
-					<a class="nav-link" href="{{ url_for('index') }}">Home</a>
+					<a class="nav-link" href="#">Home</a>
 					<a class="nav-link" href="#">Log In</a>
 					<a class="nav-link" href="#">Sign Up</a>
 				</div>
 			</div>
 		</nav>
-	</header>
+
+    <header>
+        <div class="row justify-content-md-center">
+        <div class="card col-sm-6" style="width: 8rem;">
+        <div class="card-body center-align">
+            <img src="https://www.deliciousalchemy.com/wp-content/uploads/2017/04/VictoriaSpongeDecorateBanner-3.jpg" alt="" class="card-img-top">
+            <hr>
+            <p class="card-text">Want to Join?<br>Sign up now to join the community of Gluten Free cooks!</p>
+            <a href="#" class="btn btn-primary">Sign Up</a>
+        </div>
+        </div>
+        </div>
+    </header>
 
 	<main>
 		{% block content %}

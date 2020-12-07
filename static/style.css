@@ -1,9 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap');
+
+body {
+    font-family: 'Oswald', "sans-serif";
+}
+
+.recipe-container {
+    padding: 3%;
+}
+
 .outline {
     border: 2px solid black;
+    padding: 0;
 }
 
 .uppercase {
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
+}
+
+.view-header
+h3 {
+    font-weight: 600;
+}
+
+#view-description {
+    font-weight: 400;
+}
+
+#view-createdby {
+    font-weight: 200;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.box {
+    background-color: pink;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 2em;
+}
+
+.recipe-details {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 2%;
+    margin: 0 auto;
+}
+
+.list_headers {
+    font-size: 2em;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.list-items{ 
+    padding: 2px;
+    font-weight: 400;
+    line-height: 2;
 }

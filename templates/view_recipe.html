@@ -1,58 +1,65 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3>{{ recipe.recipe_name }}</h3>
-<p>{{ recipe.recipe_description }}</p>
-<p>Post Created By: <em>Enter Username Here</em></p> 
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm outline">
-        <div class="uppercase">
-            Serves
-        </div>
-        <br>
-        {{recipe.serves}}
+<div class="recipe-container">
+    <div class="container view-header">
+        <h3>{{ recipe.recipe_name }}</h3>
+        <p id="view-description">{{ recipe.recipe_description }}</p>
+        <p id="view-createdby">Post Created By: <em>Enter Username Here</em></p> 
     </div>
-    <div class="col-sm outline">
-        <div class="uppercase">
-            Prep Time
-        </div>
-        <br>
-        <strong>Hours:</strong> {{recipe.prep_time.hours}}
-        <strong>Minutes:</strong> {{recipe.prep_time.minutes}}
-    </div>
-    <div class="col-sm outline">
-        <div class="uppercase">
-            Total Time
-        </div>
-        <br>
-        <strong>Hours:</strong> {{recipe.total_time.hours}}
-        <strong>Minutes:</strong> {{recipe.total_time.minutes}}
-    </div>
-  </div>
-</div>
-
 
     <div class="container">
     <div class="row">
-        <div class="col-sm-4">
-        Ingredients:
-        <ul>
-            {% for ingredient in recipe.ingredients %}
-                <li>{{ingredient}}</li>
-            {% endfor %}
-        </ul>
-    
+        <div class="col-sm outline">
+            <div class="uppercase box">
+                Serves
+            </div>
+            <div class="recipe-details">
+            <p>{{recipe.serves}}</p>
+            </div>
         </div>
-        <div class="col-sm-6">
-        Directions:
-        <ul>
-            {% for direction in recipe.directions %}
-                <li>{{direction}}</li>
-            {% endfor %}
-        </ul>
+        <div class="col-sm outline">
+            <div class="uppercase box">
+                Prep Time
+            </div>
+            <div class="recipe-details">
+                <p>Hours: {{recipe.prep_time.hours}}</p>
+                <p>Minutes: {{recipe.prep_time.minutes}}</p>
+            </div>
+        </div>
+        <div class="col-sm outline">
+            <div class="uppercase box">
+                Total Time
+            </div>
+            <div class="recipe-details">
+                <p>Hours: {{recipe.total_time.hours}}</p>
+                <p>Minutes: {{recipe.total_time.minutes}}</p> 
+            </div>
         </div>
     </div>
     </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5">
+            <h4 class="list_headers">Ingredients:</h4>
+            <ul class="list-items">
+                {% for ingredient in recipe.ingredients %}
+                    <li>{{ingredient}}</li>
+                {% endfor %}
+            </ul>
+        
+            </div>
+            <div class="col-sm-4">
+            <h4 class="list_headers">Directions:</h4>
+            <ol class="list-items">
+                {% for direction in recipe.directions %}
+                    <li>{{direction}}</li>
+                {% endfor %}
+            </ol>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

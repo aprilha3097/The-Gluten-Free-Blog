@@ -17,7 +17,13 @@
       "**/.theia": true,
       "**/core.Microsoft*": true,
       "**/core.mongo*": true,
-      "**/core.python*": true,
+      "**/core.python*": true
    },
-   "emmet.extensionsPath": ".theia"
+   "emmet.extensionsPath": ".theia",
+   "emmet.triggerExpansionOnTab": true,
+   "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "razor": "html",
+    "plaintext": "pug"
+}
 }

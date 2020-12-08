@@ -4,29 +4,32 @@
     <header>
      {% if session.user %}
         <div class="row justify-content-md-center">
-        <div class="card col-sm-6" style="width: 8rem;">
+        <div class="card col-sm-8" style="width: 2rem;">
         <div class="card-body center-align">
             <img src="https://www.deliciousalchemy.com/wp-content/uploads/2017/04/VictoriaSpongeDecorateBanner-3.jpg" alt="" class="card-img-top">
             <hr>
-            <p class="card-text">Welcome Back!<br>Remember you can  add your favorite recipes to your Cookbook</p>
+            <h4 class="card-text">Welcome Back!</h4>
+            <h5>Remember to add your favorite recipes to your Cookbook</h5>
             <a href="#" class="btn btn-primary">My CookBook</a>
         </div>
         </div>
         </div>
      {% else %}
         <div class="row justify-content-md-center">
-        <div class="card col-sm-6" style="width: 8rem;">
+        <div class="card col-sm-8" style="width: 2rem;">
         <div class="card-body center-align">
             <img src="https://www.deliciousalchemy.com/wp-content/uploads/2017/04/VictoriaSpongeDecorateBanner-3.jpg" alt="" class="card-img-top">
             <hr>
-            <p class="card-text">Want to Join?<br>Sign up now to join the community of Gluten Free cooks!</p>
-            <a href="#" class="btn btn-primary">Sign Up</a>
+            <h4 class="card-text">Want to Join?</h4>
+            <h5>Sign up now to join the community of Gluten Free Cheifs!</h5>
+            <a href="{{ url_for('register') }}" class="btn btn-primary">Sign Up</a>
         </div>
         </div>
         </div>
     {% endif %}
     </header>
 
+    <h4 class="center-align">All Recipes</h4>
 
     {% for recipe in recipes %}
     {% if loop.index % 2 != 0 %}

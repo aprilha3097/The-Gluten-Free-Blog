@@ -1,6 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
+   
     <header>
+     {% if session.user %}
+        <div class="row justify-content-md-center">
+        <div class="card col-sm-6" style="width: 8rem;">
+        <div class="card-body center-align">
+            <img src="https://www.deliciousalchemy.com/wp-content/uploads/2017/04/VictoriaSpongeDecorateBanner-3.jpg" alt="" class="card-img-top">
+            <hr>
+            <p class="card-text">Welcome Back<br>Remember to add your favorite recipes to your cookbook!</p>
+            <a href="#" class="btn btn-primary">My CookBook</a>
+        </div>
+        </div>
+        </div>
+     {% else %}
         <div class="row justify-content-md-center">
         <div class="card col-sm-6" style="width: 8rem;">
         <div class="card-body center-align">
@@ -11,7 +24,9 @@
         </div>
         </div>
         </div>
+    {% endif %}
     </header>
+
 
     {% for recipe in recipes %}
     {% if loop.index % 2 != 0 %}

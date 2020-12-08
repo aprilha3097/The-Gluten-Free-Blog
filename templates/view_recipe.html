@@ -5,7 +5,7 @@
     <div class="container view-header">
         <h3>{{ recipe.recipe_name }}</h3>
         <p id="view-description">{{ recipe.recipe_description }}</p>
-        <p id="view-createdby">Post Created By: <em>Enter Username Here</em></p> 
+        <p id="view-createdby">Post Created By: <em>{{ recipe.created_by.title() }}</em></p> 
     </div>
 
     <div class="container">

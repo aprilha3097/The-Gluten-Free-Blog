@@ -1,0 +1,39 @@
+{% extends  "base.html" %}
+{% block content %}
+
+<h3 class="center-align">Login</h3>
+
+<!-- User Registration Form -->
+<div class="row justify-content-md-center">
+	<form class="col-sm-6" method="POST" action="{{ url_for('login') }}">
+		<div class="card-panel">
+        <!-- username -->
+			<div class="row">
+				<div class="col s12 input-group">
+					<input id="username" name="username" type="text" class="validate" required>
+					<label for="username" class="form-label">USERNAME</label>
+				</div>
+			</div>
+            <!-- password -->
+			<div class="row">
+				<div class="col s12">
+					<input id="password" name="password" type="password" class="validate visually-hidden" required>
+					<label for="password">PASSWORD</label>
+				</div>
+			</div>
+            <!-- Login Button  -->
+            <div class="row">
+                <button class="submit col s12 btn-large light-blue darken-4 text-shadow">Sign In</button>
+            </div>
+		</div>
+	</form>
+</div>
+
+<!-- Redirect users that already have an account to the log in page -->
+<div class="row justify-content-md-center">
+    <div class="col-sm-6">
+        <p class="center-align">Are you New? <a href="#">Resgister Here</a></p>
+    </div>
+</div>
+
+{% endblock %}

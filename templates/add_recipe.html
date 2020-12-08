@@ -1,0 +1,50 @@
+{% extends "base.html %}
+{% block content %}
+
+<h3>Add a Recipe</h3>
+<div class="row card-panel">
+	<form class="col-sm-10" method="POST" action="#">
+        <!-- recipe name -->
+		<div class="row">
+			<div class="input-field col s12">
+				<input id="recipe_name" name="recipe_name" minlength="5" maxlength="50"
+                type="text" class="validate" required>
+				<label for="recipe_name">Recipe Name</label>
+			</div>
+		</div>
+        <!-- recipe description -->
+		<div class="row">
+			<div class="input-field col s12">
+				<textarea id="recipe_description" name="recipe_description" minlength="5"
+                 maxlength="200" class="materialize-textarea validate" required></textarea>
+				<label for="recipe_description">Textarea</label>
+			</div>
+
+		</div>
+        <!-- recipe ingredients -->
+		<div class="row">
+			<div class="input-field col s12">
+				<textarea id="ingredients" name="ingredients" minlength="5"
+                 maxlength="200" class="materialize-textarea validate" required></textarea>
+				<label for="ingredients">Ingredients</label>
+			</div>
+            <button type="button" class="btn btn-primary btn-sm">Add Another Ingredient</button>
+		</div>
+        <!-- recipe instructions -->
+		<div class="row">
+			<div class="input-field col s12">
+				<textarea id="instructions" name="instructions" minlength="5"
+                 maxlength="200" class="materialize-textarea validate" required></textarea>
+				<label for="instructions">Instructions</label>
+			</div>
+            <button type="button" class="btn btn-primary btn-sm">Add Another Instruction</button>
+		</div>
+        <!-- submit button -->
+        <div class="col s12 center-align">
+            <button type="submit" class="btn-large light-blue darken-1 text-shadow">
+                Add Task  <i class="fas fa-plus-square right"></i>
+            </button>
+        </div>
+	</form>
+</div>
+{%  endblock %}

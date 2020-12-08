@@ -82,6 +82,10 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+@app.route("/add_recipe", methods=["GET", "POST"])
+def add_recipe():
+    return render_template("add_recipe.html")
+
 @app.route("/logout")
 def logout():
     session.pop("user")

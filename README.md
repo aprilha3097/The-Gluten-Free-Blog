@@ -76,3 +76,7 @@ For more information on cloning repositories, go [here](https://help.github.com/
 
 Code for the repeatable buttons on adding new ingredients and instructions from stack overflow:
 https://stackoverflow.com/questions/21135520/repeat-a-div-when-clicking-a-button
+
+Code to remove the previous entered values removed when using the clone function. Bug that was after each onclick
+to clone the input the previous text values were copied as well:
+https://stackoverflow.com/questions/6845058/clear-text-field-value-in-clone-object

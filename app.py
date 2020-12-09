@@ -91,14 +91,7 @@ def add_recipe():
             "ingredients": request.form.getlist("ingredients"),
             "directions": request.form.getlist("directions"),
             "serves": request.form.get("serves"),
-            "prep_time": {
-                "hours": request.form.get(int("hours")),
-                "minutes": request.form.get(int("minutes"))
-            },
-            "total_time": {
-                "hours": request.form.get(int("hours")),
-                "minutes": request.form.get(int("minutes"))
-            },
+            "time": request.form.get("time"),
             "created_by": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)

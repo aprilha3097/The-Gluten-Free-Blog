@@ -71,3 +71,7 @@ h3 {
 .profile-header {
     letter-spacing: 3px;
 }
+
+table, tr, td {
+    border: none;
+}

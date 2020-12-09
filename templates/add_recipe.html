@@ -39,24 +39,37 @@
             </div>
 
         <!-- recipe ingredients -->
-		<div class="row">
-			<div class="input-group col s12">
-				<textarea id="ingredients" name="ingredients" minlength="5"
-                 maxlength="200" class="materialize-textarea validate" required></textarea>
-				<label for="ingredients">Ingredients</label>
-			</div>
-            <button type="button" class="btn btn-primary btn-sm">Add Another Ingredient</button>
-		</div>
+    	<div class="row">
+        <div class="input-group col s2 repeatable">
+            <table>
+            <caption>Ingredient</caption>
+                <tr>
+                    <td>
+                        <input type="text" name="ingredients" id="ingredients" minlength="5"
+                        maxlength="200" class="materialize-textarea validate" required>
+                    </td>
+                </tr>
+            </table>
+            <button type="button" class="btn btn-primary btn-sm repeat">Add Another Ingredient</button>
+        </div>
+    </div>
 
-        <!-- recipe instructions -->
-		<div class="row">
-			<div class="input-group col s12">
-				<textarea id="directions" name="directions" minlength="5"
-                 maxlength="200" class="materialize-textarea validate" required></textarea>
-				<label for="directions">Directions</label>
-			</div>
-            <button type="button" class="btn btn-primary btn-sm">Add Another Direction</button>
-		</div>
+        <!-- recipe directions -->
+        <!-- repeatable onclick function from stackoverflow -->
+	<div class="row">
+        <div class="input-group col s2 repeatable">
+            <table>
+            <caption>Directions</caption>
+                <tr>
+                    <td>
+                        <input type="text" name="directions" id="directions" minlength="5"
+                        maxlength="200" class="materialize-textarea validate" required>
+                    </td>
+                </tr>
+            </table>
+            <button type="button" class="btn btn-primary btn-sm repeat">Add Another Direction</button>
+        </div>
+    </div>
 
         <!-- submit button -->
         <div class="col s12 center-align">

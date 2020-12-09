@@ -70,3 +70,9 @@ It can take up to 20 minutes for changes to the site to be published after pushi
 
 For more information on cloning repositories, go [here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
+
+
+### Credit
+
+Code for the repeatable buttons on adding new ingredients and instructions from stack overflow:
+https://stackoverflow.com/questions/21135520/repeat-a-div-when-clicking-a-button

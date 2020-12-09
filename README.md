@@ -2,6 +2,14 @@
 
 Milestone Project # 3 - The Gluten Free Recipe Blog
 
+The purpose of the site is to create a community for those who feel restricted to teh Gluten Free diet. Some by choice,
+but others as a dietary requirement. The site is to share your favorite gluten free recipes, creating a community of other
+gluten free eaters. 
+
+Users are able to view recipes, whether a registered user or not. But, if you want to get the full community access,
+users are able to register as a member and then are able to create and share their own recipes, comment on other users 
+recipes as well as like and create your own personal Cookbook of your favorite recipes. 
+
 ## Technologies Used
 
 1. [HTML5](https://en.wikipedia.org/wiki/HTML5)
@@ -16,6 +24,20 @@ Milestone Project # 3 - The Gluten Free Recipe Blog
     * Sourced fonts required for site
 6. [Visual Studio Code](https://code.visualstudio.com/)
     * The code editing sowftware that was used for the creation of this project
+
+
+## UX
+
+### User Stories:
+- As a user, I want to preview the available recipes and select the recipe that I want to view
+- As a new user, I want to register as a member to the community for full access
+- As a current user, I want to log into my personal account to use all features of the site
+- As a user, I want to view my portfolio of recipes that I have already added to the community
+- As a user, I want to like and add recipes that I would like to save into my personal Cookbook for future referance
+- As a user, I want to be able to leave comments on other recipes to speak with the other site users
+
+### Features: 
+
 
 ## Deployment
 #### To deploy this site with Github Pages, follow these steps:

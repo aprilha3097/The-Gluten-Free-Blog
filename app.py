@@ -92,12 +92,12 @@ def add_recipe():
             "directions": request.form.getlist("directions"),
             "serves": request.form.get("serves"),
             "prep_time": {
-                "hours": request.form.get("hours"),
-                "minutes": request.form.get("minutes")
+                "hours": request.form.get(int("hours")),
+                "minutes": request.form.get(int("minutes"))
             },
             "total_time": {
-                "hours": request.form.get("hours"),
-                "minutes": request.form.get("minutes")
+                "hours": request.form.get(int("hours")),
+                "minutes": request.form.get(int("minutes"))
             },
             "created_by": session["user"]
         }

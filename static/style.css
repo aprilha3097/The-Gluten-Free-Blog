@@ -179,3 +179,15 @@ a {
 .zoom:hover {
   transform: scale(1.10);
 }
+
+.founders
+img {
+    width: 75%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.founder-misson {
+    padding: 2% 0;
+}

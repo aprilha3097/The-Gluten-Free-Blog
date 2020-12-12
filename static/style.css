@@ -4,6 +4,44 @@ body {
     font-family: 'Oswald', "sans-serif";
 }
 
+#hero-container {
+    height: 800px;
+}
+
+.hero-image {
+    /*--Image sourced from the Delicious Alchemy via Google Images --*/
+    background: url("https://www.deliciousalchemy.com/wp-content/uploads/2017/04/VictoriaSpongeDecorateBanner-3.jpg");
+    background-size: cover;
+    background-position: center center;
+    width: auto;
+    animation-name: hero-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+/* -- Inspiration from First Milestone Project - The Fucntion Band --*/
+@keyframes hero-zoom {
+    from { 
+      transform: scale(1);
+    }
+  
+    to{
+      transform: scale(1.055);
+    }
+}
+
+.hero-caption {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    width: 40%;
+    height: auto;
+    text-align: center;
+    background-color: grey;
+    letter-spacing: 1.5px;
+    color: white;
+}
+
 #who-we-are > h4{
     font-weight: 500;
     font-size: 4em;

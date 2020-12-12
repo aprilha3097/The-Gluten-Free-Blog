@@ -4,6 +4,26 @@ body {
     font-family: 'Oswald', "sans-serif";
 }
 
+#who-we-are > h4{
+    font-weight: 500;
+    font-size: 4em;
+}
+
+#who-we-are
+i {
+    font-size: 3em;
+    padding: 2%;
+}
+
+.about-label {
+    font-size: 2em;
+}
+
+.about-desc {
+    font-weight: 200;
+    font-size: 1.5em;
+}
+
 .flash_message {
     font-size: 1.5em;
     padding: 1% 0;

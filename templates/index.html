@@ -24,56 +24,54 @@
 </header>
 
 <section id="who-we-are" class="container">
-   <h4 class="center-align">How do we work?</h4>
-   <div class="row">
-      <div class="col s12 m4 center-align">
-        <i class="fas fa-globe"></i>
-         <p class="about-label">Connect</p>
-         <p class="about-desc">Join our community to connect with other Gluten Free Lovers</p>
-      </div>
+    <h4 class="center-align">How do we work?</h4>
+    <div class="row">
+        <div class="col s12 m4 center-align">
+            <i class="fas fa-globe"></i>
+            <p class="about-label">Connect</p>
+            <p class="about-desc">Join our community to connect with other Gluten Free Lovers</p>
+        </div>
         <div class="col s12 m4 center-align">
             <i class="far fa-paper-plane"></i>
             <p class="about-label">Share</p>
             <p class="about-desc">Share your favorite recipes</p>
-      </div>
-       <div class="col s12 m4 center-align">
-        <i class="fas fa-utensils"></i>
-        <p class="about-label">Cook</p>
-        <p class="about-desc">Save your favorite recipes and start cooking!</p>
-      </div>
-   </div>
+        </div>
+        <div class="col s12 m4 center-align">
+            <i class="fas fa-utensils"></i>
+            <p class="about-label">Cook</p>
+            <p class="about-desc">Save your favorite recipes and start cooking!</p>
+        </div>
+    </div>
 </section>
 
-    <!-- Preview all Recipes -->
-    <h4 class="center-align">All Recipes</h4>
-
-    {% for recipe in recipes %}
-    {% if loop.index % 2 != 0 %}
-    <div class="row justify-content-md-center">
-    <div class="col-sm-5">
-        <div class="card border-info">
-            <div class="card-body">
-                <h5 class="card-title">{{ recipe.recipe_name }}</h5>
-                <p class="card-text">{{ recipe.recipe_description }}</p>
-                <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" class="btn btn-primary">View Recipe</a>
-                <p>Post Created By: <em>{{ recipe.created_by.title() }}</em></p> 
-            </div>
+<!-- Preview all Recipes -->
+<h4 class="center-align">See what you could be making next!</h4>
+<p class="center-align">View more recipes <a href="{{url_for('recipes') }}">Here</a></p>
+<div class="card-deck">
+    <div class="card">
+        <img class="card-img-top" src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/216054.jpg"
+            alt="Gluten Free Pizza">
+        <div class="card-body">
+            <h5 class="card-title">Gluten Free Pizza</h5>
+            <p class="card-text">Create a delisious gluten free pizza to share with friends and family. </p>
         </div>
     </div>
-    {% else %}
-    <div class="col-sm-5">
-        <div class="card border-info">
-            <div class="card-body">
-                <h5 class="card-title">{{ recipe.recipe_name }}</h5>
-                <p class="card-text">{{ recipe.recipe_description }}</p>
-                <a href="{{ url_for('view_recipe', recipe_id=recipe._id)}}" class="btn btn-primary">View Recipe</a>
-                <p>Post Created By: <em>{{ recipe.created_by.title() }}</em></p> 
-            </div>
+    <div class="card">
+        <img class="card-img-top" src="https://therecipecritic.com/wp-content/uploads/2020/01/naan_bread_hero.jpg"
+            alt="Gluten Free Naan Bread">
+        <div class="card-body">
+            <h5 class="card-title">Gluten Free Naan Bread</h5>
+            <p class="card-text">Finally be able to eat your curry right with a gluten free Naan bread.</p>
         </div>
     </div>
+    <div class="card">
+        <img class="card-img-top"
+            src="https://www.eatingbirdfood.com/wp-content/uploads/2019/05/confetti-chicken-casserole-2.jpg"
+            alt="Gluten Free Casserole">
+        <div class="card-body">
+            <h5 class="card-title">Gluten Free Casserole</h5>
+            <p class="card-text">Perfect for that Pot Lock next week!</p>
+        </div>
     </div>
-
-    {% endif %}
-    {% endfor %}
-
+</div>
 {% endblock %}

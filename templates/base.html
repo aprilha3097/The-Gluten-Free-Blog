@@ -30,6 +30,7 @@
 				<div class="navbar-nav">
 					<a class="nav-link" href="{{ url_for('index') }}">Home</a>
                     <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                    <a class="nav-link" href="{{ url_for('recipes') }}">View Recipes</a>
                     {% if session.user %}
                         <a class="nav-link" href="{{ url_for('add_recipe') }}">Add Recipe</a>
                         <a class="nav-link" href="#">My Cookbook</a>

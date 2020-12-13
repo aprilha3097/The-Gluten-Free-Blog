@@ -7,7 +7,7 @@
     {% for recipe in recipes %}
     {% if loop.index % 2 != 0 %}
     <div class="row justify-content-md-center">
-    <div class="col-sm-5">
+    <div class="col-sm-4">
         <div class="card border-info">
             <div class="card-body">
                 <h5 class="card-title">{{ recipe.recipe_name }}</h5>
@@ -18,7 +18,7 @@
         </div>
     </div>
     {% else %}
-    <div class="col-sm-5">
+    <div class="col-sm-4">
         <div class="card border-info">
             <div class="card-body">
                 <h5 class="card-title">{{ recipe.recipe_name }}</h5>

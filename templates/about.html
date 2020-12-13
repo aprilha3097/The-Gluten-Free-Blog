@@ -1,18 +1,38 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="container founders center-align">
-    <h3 class="founder-header">Your Founders</h3>
-    <h5 class="founder-name">April & Toby Thompson</h5>
-    <img src="https://i.pinimg.com/originals/cb/22/de/cb22deb9811d2b76411f7b79a160ba14.jpg" alt="">
-    <h5 class="founder-misson">Our Mission</h5>
-    <p> My Husband is gluten intolerant, but we love to cook and try new recipes. Cooking when restricted to a gluten
-        free diet can be hard, but fear not!
-        The Gluten Free Cookbook is a great way to join a community of other Gluten Free Cheifsm whether by choice or
-        for dietary restrictions.
-        We welcome all Gluten Free cheifs and we are excited to see what new recipes you guys come up with!
-    </p>
+<section class="container about">
+    <div class="mission">
+        <h5>Our Mission</h5>
+        <p>
+            Our Mission for this community is to connect, share and cook recipes that are catered towards the gluten
+            free diet. Created by our founders April and Toby Thompson
+            we wanted to ensure that being on a gluten free diet should not be a restriction. We are here for you! We
+            love food and cooking great food. Being Gluten Free should not stop
+            us from cooking the food we love!
+        </p>    
+    </div>
+    <div class="container about-button center-align">
+        <a href="{{ url_for('register') }}" class="btn btn-primary">Register Now!</a>
+    </div>
 
-<div>
+    <div class="founders">
+        <img src="https://i.pinimg.com/originals/cb/22/de/cb22deb9811d2b76411f7b79a160ba14.jpg" alt="">
+        <h5>Our Founders</h5>
+        <h6>April & Toby Thompson</h6>
+        <p>
+            Welcome to The Gluten Free Cookbook! Our online community dedicated to food lovers that prefer or are
+            restricted to a gluten free diet.
+            Almost 3 years ago, my husband had to be put on a gluten free diet. We were heartbroken, we love food and
+            love cooking food. We felt restricted to
+            what we were able to make and eat. But, we then discovered that being on a gluten free diet should not
+            restrict us, but forces us to be more creative
+            on the food choices we make. So, welcome to this online community. We want to share and discover recipes
+            from backgrounds that are gluten free.
+            Let's Get Cooking!
+        </p>
+
+    </div>
+</section>
 
 {% endblock %}

@@ -182,16 +182,47 @@ a {
 
 .founders
 img {
-    width: 75%;
+    width: 50%;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-.founder-misson {
-    padding: 2% 0;
+.mission
+h5 {
+    font-weight: 500;
+    font-size: 3em;
 }
 
-a { 
+.founders {
+    padding: 2%;
+}
+
+.founders  
+h5 {
+    font-weight: 500;
+    font-size: 3em;  
+}
+
+.founders
+h6 {
+    font-weight: 400;
+    font-size: 2em;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.about
+p {
+    font-weight: 300;
+    font-size: 1.25em;
+    text-align: center;
+}
+
+.about-button {
+    padding: 2%;
+}
+
+.card-link { 
     color: inherit; 
 }

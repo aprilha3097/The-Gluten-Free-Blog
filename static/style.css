@@ -191,3 +191,7 @@ img {
 .founder-misson {
     padding: 2% 0;
 }
+
+a { 
+    color: inherit; 
+}

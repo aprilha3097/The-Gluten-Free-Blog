@@ -41,6 +41,25 @@ def view_recipe(recipe_id):
     return render_template("view_recipe.html", recipe=recipe)
 
 
+@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+def edit_recipe(recipe_id):
+    if request.method == "POST":
+        submit = {
+            "recipe_name": request.form.get("recipe_name"),
+            "recipe_description": request.form.get("recipe_description"),
+            "ingredients": request.form.getlist("ingredients"),
+            "directions": request.form.getlist("directions"),
+            "serves": request.form.get("serves"),
+            "time": request.form.get("time"),
+            "created_by": session["user"]
+        }
+        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
+        flash("Task Successfully Updated")
+
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("edit_recipe.html", recipe=recipe)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":

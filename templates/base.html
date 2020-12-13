@@ -33,7 +33,7 @@
                     <a class="nav-link" href="{{ url_for('recipes') }}">View Recipes</a>
                     {% if session.user %}
                         <a class="nav-link" href="{{ url_for('add_recipe') }}">Add Recipe</a>
-                        <a class="nav-link" href="#">My Cookbook</a>
+                        <a class="nav-link" href="{{ url_for('cookbook', username=session['user']) }}">My Cookbook</a>
                         <a class="nav-link" href="{{ url_for('logout')}}">Log Out</a>
                     {% else %}
                         <a class="nav-link" href="{{ url_for('login') }}">Log In</a>

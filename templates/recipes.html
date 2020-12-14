@@ -5,16 +5,21 @@
     <!-- Preview all Recipes -->
     <h4 class="center-align">View All Recipes</h4>
 
+    <!-- Search for recipe -->
     <div class="container">
-        <div class="row justify-content-md-center" action="{{url_for('search') }}" method="POST">
-            <form class="form-inline col-sm-8">
-                <input class="form-control" type="text" aria-label="Search" name="query" id="query" minlength="3" validate>
-                <label for="query">Search</label>
+        <div class="row card-panel justify-content-md-center" >
+            <form class="col s12" action="{{url_for('search') }}" method="POST">
+                <div class="row center-align">
+                    <div class="input-field col s12 m8">
+                        <input type="text" name="query" id="query" minlength="3" class="validate" required>
+                        <label for="query">Search</label>
+                    </div>
+                    <div>
+                        <button class="btn" type="submit">Search</button>
+                        <a href="{{url_for('recipes') }}" class="btn">Reset</a>
+                    </div>
+                </div>
             </form>
-            <div class="col-sm-2">
-                <button class="btn" type="submit">Search</button>
-                <a href="{{url_for('recipes') }}" class="btn">Reset</a>
-            </div>
         </div>
     </div>
 

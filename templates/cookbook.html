@@ -3,9 +3,9 @@
 
 <!-- Display recipes that user has added themselves -->
 {% for recipe in my_recipes %}
-  <h4 class="center-align">My Recipes</h4>
-    {% if loop.index % 2 != 0 %}
-    <div class="row justify-content-md-center">
+<h4 class="center-align">My Recipes</h4>
+{% if loop.index % 2 != 0 %}
+<div class="row justify-content-md-center">
     <div class="col-sm-4">
         <div class="card border-info">
             <div class="card-body">
@@ -13,10 +13,10 @@
                 <p class="card-text">{{ recipe.recipe_description }}</p>
                 <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" class="btn">View Recipe</a>
                 {% if session.user|lower == recipe.created_by|lower %}
-                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn">Edit Recipe</a>
-                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn">Delete Recipe</a>
+                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn">Edit Recipe</a>
+                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn">Delete Recipe</a>
                 {% endif %}
-                <p>Post Created By: <em>{{ recipe.created_by.title() }}</em></p> 
+                <p>Post Created By: <em>{{ recipe.created_by.title() }}</em></p>
             </div>
         </div>
     </div>
@@ -28,19 +28,19 @@
                 <p class="card-text">{{ recipe.recipe_description }}</p>
                 <a href="{{ url_for('view_recipe', recipe_id=recipe._id)}}" class="btn btn-primary">View Recipe</a>
                 {% if session.user|lower == recipe.created_by|lower %}
-                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn">Edit Recipe</a>
-                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn">Delete Recipe</a>
+                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn">Edit Recipe</a>
+                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn">Delete Recipe</a>
                 {% endif %}
-                <p>Post Created By: <em>{{ recipe.created_by.title() }}</em></p> 
+                <p>Post Created By: <em>{{ recipe.created_by.title() }}</em></p>
             </div>
         </div>
     </div>
-    </div>
-    {% endif %}
-    {% else %}
-    <div class="container center-align">
-        <h4>You have not added any new recipes!</h4>
-        <a href="{{ url_for('add_recipe') }}" class="btn btn-primary">Add Recipe</a>
-    </div>
-    {% endfor %}
+</div>
+{% endif %}
+{% else %}
+<div class="container center-align">
+    <h4>You have not added any new recipes!</h4>
+    <a href="{{ url_for('add_recipe') }}" class="btn btn-primary">Add Recipe</a>
+</div>
+{% endfor %}
 {% endblock %}

@@ -112,12 +112,11 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/cookbook/<username>", methods=["GET", "POST"])
-def cookbook(username):
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
+@app.route("/cookbook", methods=["GET", "POST"])
+def cookbook():
+    my_recipes = list(mongo.db.recipes.find({"created_by": session["user"]}))
     if session["user"]:
-        return render_template("cookbook.html", username=username)
+        return render_template("cookbook.html", my_recipes=my_recipes)
     return redirect(url_for("login"))
 
 

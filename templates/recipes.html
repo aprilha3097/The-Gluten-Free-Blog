@@ -26,9 +26,9 @@
 {% for recipe in recipes %}
 {% if loop.index % 2 != 0 %}
 <div class="container">
-    <div class="row">
+    <div class="row valign-wrapper">
         <div class="col s6">
-            <div class="card">
+            <div class="card recipe-cards">
                 <div class="card-body">
                     <h5>{{ recipe.recipe_name }}</h5>
                     <p class="card-text">{{ recipe.recipe_description }}</p>
@@ -43,7 +43,7 @@
         </div>
         {% else %}
         <div class="col s6">
-            <div class="card">
+            <div class="card recipe-cards">
                 <div class="card-body">
                     <h5>{{ recipe.recipe_name }}</h5>
                     <p class="card-text">{{ recipe.recipe_description }}</p>

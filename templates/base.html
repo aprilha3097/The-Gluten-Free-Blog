@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <!-- Materialize -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-		type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        type="text/css">
     <!-- Style Sheet -->
     <link rel="stylesheet" href="/static/style.css" type="text/css">
     {% block styles %}
@@ -19,42 +19,44 @@
 
 <body>
     <header>
-	    <!-- Top Navbar -->
-		<nav class="nav-extended text-shadow light-blue darken-1">
-			<div class="nav-wrapper">
+        <!-- Top Navbar -->
+        <nav class="nav-extended text-shadow light-blue darken-1">
+            <div class="nav-wrapper">
                 <a class="brand-logo" href="{{ url_for('index') }}">The Gluten Free Cookbook</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
-				<ul class="right hide-on-med-and-down">
-					<li><a href="{{ url_for('index') }}">Home</a></li>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
                     <li><a href="{{ url_for('about') }}">About</a></li>
                     <li><a href="{{ url_for('recipes') }}">View Recipes</a></li>
                     {% if session.user %}
-                        <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
-                        <li><a href="{{ url_for('cookbook') }}">My Cookbook</a></li>
-                        <li><a href="{{ url_for('logout')}}">Log Out</a></li>
+                    <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
+                    <li><a href="{{ url_for('cookbook') }}">My Cookbook</a></li>
+                    <li><a href="{{ url_for('logout')}}">Log Out</a></li>
                     {% else %}
-                        <li><a href="{{ url_for('login') }}">Log In</a></li>
-                        <li><a href="{{ url_for('register') }}">Sign Up</a></li>
+                    <li><a href="{{ url_for('login') }}">Log In</a></li>
+                    <li><a href="{{ url_for('register') }}">Sign Up</a></li>
                     {% endif %}
                 </ul>
             </div>
         </nav>
+        <!-- Mobileview Navigation Bar -->
         <ul class="sidenav" id="mobile-demo">
             <li><a class="brand-logo" href="{{ url_for('index') }}">The Gluten Free Cookbook</a></li>
-					<li><a href="{{ url_for('index') }}">Home</a></li>
-                    <li><a href="{{ url_for('about') }}">About</a></li>
-                    <li><a href="{{ url_for('recipes') }}">View Recipes</a></li>
-                    {% if session.user %}
-                        <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
-                        <li><a href="{{ url_for('cookbook') }}">My Cookbook</a></li>
-                        <li><a href="{{ url_for('logout')}}">Log Out</a></li>
-                    {% else %}
-                        <li><a href="{{ url_for('login') }}">Log In</a></li>
-                        <li><a href="{{ url_for('register') }}">Sign Up</a></li>
-                    {% endif %}
-                </ul>
-            </header>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('recipes') }}">View Recipes</a></li>
+            {% if session.user %}
+            <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
+            <li><a href="{{ url_for('cookbook') }}">My Cookbook</a></li>
+            <li><a href="{{ url_for('logout')}}">Log Out</a></li>
+            {% else %}
+            <li><a href="{{ url_for('login') }}">Log In</a></li>
+            <li><a href="{{ url_for('register') }}">Sign Up</a></li>
+            {% endif %}
+        </ul>
+    </header>
     <section>
+
         <!-- Flash Messages will appear here -->
         {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -65,22 +67,44 @@
         {% endfor %}
         {% endif %}
         {% endwith %}
+
     </section>
+
     <main>
         {% block content %}
-
         {% endblock %}
     </main>
-
-    <footer>
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2020 Copyright:
-            <a href="#"> The Gluten Free Cookbook</a>
+    <footer class="page-footer blue lighten-1">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">The Gluten Free Cookbook</h5>
+                    <p class="grey-text text-lighten-4">
+                        Join the community of Gluten Free Food Lovers.
+                    </p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="{{ url_for('about') }}">About</a></li>
+                        <li><a class="grey-text text-lighten-3" href="{{ url_for('recipes') }}">View Recipes</a></li>
+                        <li><a class="grey-text text-lighten-3" href="{{ url_for('login') }}">Log In</a></li>
+                        <li><a class="grey-text text-lighten-3" href="{{ url_for('register') }}">Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2020 Copyright: The Gluten Free Cookbook
+            </div>
         </div>
     </footer>
 
     <!--Jquery CDN-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
     <!--Materialize JS CDN-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="/static/script.js"></script>

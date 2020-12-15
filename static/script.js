@@ -6,4 +6,5 @@ $(function () {
         var $self = $(this);
         $self.before($self.prev('table').clone().find("input:text").val("").end());
    }); 
+    $('.sidenav').sidenav({edge: "right"});
 });

@@ -2,11 +2,12 @@
 {% block content %}
 
 <h3 class="center-align">Add a Recipe</h3>
-<div class="row card-panel justify-content-md-center">
-	<form class="col-sm-8" method="POST" action="#">
+<div class="container">
+<div class="row card-panel">
+	<form class="col s12" method="POST" action="#">
         <!-- recipe name -->
 		<div class="row">
-			<div class="input-group col s12">
+			<div class="input-field col s12">
 				<input id="recipe_name" name="recipe_name" minlength="5" maxlength="50"
                 type="text" class="validate" required>
 				<label for="recipe_name">Recipe Name</label>
@@ -15,7 +16,7 @@
 
         <!-- recipe description -->
 		<div class="row">
-			<div class="input-group col s12">
+			<div class="input-field col s12">
 				<textarea id="recipe_description" name="recipe_description" minlength="5"
                  maxlength="200" class="materialize-textarea validate" required></textarea>
 				<label for="recipe_description">Description</label>
@@ -24,7 +25,7 @@
 
         <!-- recipe serving size -->
 		<div class="row">
-			<div class="input-group col s12">
+			<div class="input-field col s12">
                 <input type="number" id="serves" name="serves" min="01" max="10">
                 <label for="serves">Serves (range from 0 to 10)</label>
 			</div>
@@ -32,7 +33,7 @@
 
         <!-- recipe total time -->
             <div class="row">
-                <div class="input-field col s6">
+                <div class="input-field col s12">
                     <input type="time" id="time" name="time" class="form-control validate" required>
                     <label for="time">Total Time (HH:MM)</label>
                 </div>
@@ -41,7 +42,7 @@
         <!-- recipe ingredients -->
     <h6 class="center-align">Add your ingredients</h6>
 	<div class="row">
-        <div class="input-group col s6 repeatable">
+        <div class="input-fieldcol s12 repeatable">
             <table>
                 <tr>
                     <td>
@@ -58,7 +59,7 @@
         <!-- repeatable onclick function from stackoverflow -->
 	<h6 class="center-align">Add your directions</h6>
     <div class="row">
-        <div class="input-group col s6 repeatable">
+        <div class="input-field col s12 repeatable">
             <table>
                 <tr>
                     <td>
@@ -79,5 +80,6 @@
         </div>
 
 	</form>
+</div>
 </div>
 {%  endblock %}

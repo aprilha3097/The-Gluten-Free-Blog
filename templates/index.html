@@ -1,23 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
 
-<header id="hero-container" class="row justify-content-md-center">
+<header class="container hero-container">
     {% if session.user %}
-    <div class="hero-image card col-sm-10">
+    <div class="hero-image card col s10">
         <div class="hero-caption">
             <h2>Welcome Back!</h2>
             <p>Remember to add your favorite recipes to your Cookbook</p>
             <!---Redirect User to Registration Page -->
-            <a href="#" class="btn btn-primary"> My Cookbook</a>
+            <a href="{{ url_for('cookbook') }}" class="btn"> My Cookbook</a>
         </div>
     </div>
     {% else %}
-    <div class="hero-image card col-sm-10">
+    <div class="hero-image card col s10">
         <div class="hero-caption">
             <h2>Welcome!</h2>
             <p>Sign up now to join the community of Gluten Free Cheifs!</p>
             <!---Redirect User to Registration Page -->
-            <a href="{{ url_for('register') }}" class="btn btn-primary">Register Now</a>
+            <a href="{{ url_for('register') }}" class="btn">Register Now</a>
         </div>
     </div>
     {% endif %}
@@ -46,8 +46,8 @@
 
 <!-- Preview all Recipes -->
 <h4 class="center-align">See what you could be making next!</h4>
-<div class="card-deck ">
-    <div class="card zoom">
+<div class="container card-deck">
+    <div class="card col m4">
         <a href="{{url_for('recipes') }}" class="card-link">
             <img class="card-img-top"
                 src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/216054.jpg"
@@ -59,7 +59,7 @@
         </a>
     </div>
 
-    <div class="card zoom">
+    <div class="card col m4">
         <a href="{{url_for('recipes') }}" class="card-link">
             <img class="card-img-top" src="https://therecipecritic.com/wp-content/uploads/2020/01/naan_bread_hero.jpg"
                 alt="Gluten Free Naan Bread">
@@ -69,7 +69,8 @@
             </div>
         </a>
     </div>
-    <div class="card zoom">
+
+    <div class="card col m4">
         <a href="{{url_for('recipes') }}" class="card-link">
             <img class="card-img-top"
                 src="https://www.eatingbirdfood.com/wp-content/uploads/2019/05/confetti-chicken-casserole-2.jpg"

@@ -281,14 +281,17 @@ SECRET_KEY|YOUR_SECRET_KEY
 ### Credit
 
 #### Code
-1. The code for the repeatable buttons on adding new ingredients and instructions from stack overflow:
-https://stackoverflow.com/questions/21135520/repeat-a-div-when-clicking-a-button
+1. The code for the repeatable buttons on adding new ingredients and instructions from [Stack Overflow](https://stackoverflow.com/questions/21135520/repeat-a-div-when-clicking-a-button)
 
-Code to remove the previous entered values removed when using the clone function. Bug that was after each onclick
-to clone the input the previous text values were copied as well:
-https://stackoverflow.com/questions/6845058/clear-text-field-value-in-clone-object
+2. Code to remove the previous entered values removed when using the clone function. Bug that was after each onclick
+to clone the input the previous text values were copied as well from [Stack Overflow](https://stackoverflow.com/questions/6845058/clear-text-field-value-in-clone-object)
 
 #### Media
-1. Image of Couple Cooking
-https://i.pinimg.com/originals/cb/22/de/cb22deb9811d2b76411f7b79a160ba14.jpg
+1. [Image of Couple Cooking](https://i.pinimg.com/originals/cb/22/de/cb22deb9811d2b76411f7b79a160ba14.jpg)
+
+2. [Image of Pizza](https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/216054.jpg)
+
+3. [Image of Naan Bread](https://therecipecritic.com/wp-content/uploads/2020/01/naan_bread_hero.jpg)
+
+4. [Image of Cassarole](https://www.eatingbirdfood.com/wp-content/uploads/2019/05/confetti-chicken-casserole-2.jpg)
 

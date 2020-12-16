@@ -30,7 +30,7 @@ Content Requirements
 ### Structure
 Information Architecture: Visual representation of the product's infustructure
 
-<img src="https://github.com/aprilha3097/The-Gluten-Free-Blog/blob/master/wireframes/flowchart/Information%20Architecture.png" width="500">
+<img src="https://github.com/aprilha3097/The-Gluten-Free-Blog/blob/master/wireframes/flowchart/Information%20Architecture.png" width="600">
 
 - When user enters site, the hero container will welcome, introduce and redirect user to Register for a new account
 - When user scrolls through the home page, details of the site's purpose are explained
@@ -56,18 +56,23 @@ Information Architecture: Visual representation of the product's infustructure
 * Wireframes for the initial structural design of the site was created using Adobe XD.
 
 Home Page:
+
 <img src="https://github.com/aprilha3097/The-Gluten-Free-Blog/blob/master/wireframes/site-wireframes/home.png" width="500">
 
 About Page:
+
 <img src="https://github.com/aprilha3097/The-Gluten-Free-Blog/blob/master/wireframes/site-wireframes/about.png" width="500">
 
 Adding & Editing Recipes Form:
+
 <img src="https://github.com/aprilha3097/The-Gluten-Free-Blog/blob/master/wireframes/site-wireframes/add_edit_recipes.png" width="500">
 
 Login & Registration Form:
+
 <img src="https://github.com/aprilha3097/The-Gluten-Free-Blog/blob/master/wireframes/site-wireframes/login_register_form.png" width="500">
 
 Viewing Exiting Recipes:
+
 <img src="https://github.com/aprilha3097/The-Gluten-Free-Blog/blob/master/wireframes/site-wireframes/preview_recipes.png" width="500">
 
 ### User Stories:
@@ -127,7 +132,12 @@ Recipes
 | Total Duration            | time                   | String     |
 | Created By                | created_by             | String     |
 
+Users 
 
+| Title                     | Key in Collection      | Data Type  |
+| ------------------------- |:----------------------:| :---------:|
+| Username                  | username               | String     |
+| Password                  | password               | String     |
 
 
 

@@ -5,47 +5,30 @@
 <h4 class="center-align">My Recipes</h4>
 
 <!-- Display each recipe -->
-{% for recipe in my_recipes %}
-<!-- Recipes are divided to the right and left side of page -->
-{% if loop.index % 2 != 0 %}
-<div class="row">
-    <div class="col s6">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">{{ recipe.recipe_name }}</h5>
-                <p class="card-text">{{ recipe.recipe_description }}</p>
-                <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" class="btn">View Recipe</a>
-                {% if session.user|lower == recipe.created_by|lower %}
-                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn">Edit Recipe</a>
-                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn">Delete Recipe</a>
-                {% endif %}
-                <p>Post Created By: <em>{{ recipe.created_by.title() }}</em></p>
+<div class="container">
+    {% for recipe in my_recipes %}
+    <div class="row">
+        <div class="col s12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ recipe.recipe_name }}</h5>
+                    <p class="card-text">{{ recipe.recipe_description }}</p>
+                    <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" class="btn">View Recipe</a>
+                    {% if session.user|lower == recipe.created_by|lower %}
+                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn">Edit Recipe</a>
+                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn">Delete Recipe</a>
+                    {% endif %}
+                    <p>Post Created By: <em>{{ recipe.created_by.title() }}</em></p>
+                </div>
             </div>
         </div>
     </div>
     {% else %}
-    <div class="col s6">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">{{ recipe.recipe_name }}</h5>
-                <p class="card-text">{{ recipe.recipe_description }}</p>
-                <a href="{{ url_for('view_recipe', recipe_id=recipe._id)}}" class="btn">View Recipe</a>
-                {% if session.user|lower == recipe.created_by|lower %}
-                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn">Edit Recipe</a>
-                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn">Delete Recipe</a>
-                {% endif %}
-                <p>Post Created By: <em>{{ recipe.created_by.title() }}</em></p>
-            </div>
-        </div>
+    <!-- If User has not added any recipes this message will display -->
+    <div class="container center-align no-recipes">
+        <h4>You have not added any new recipes!</h4>
+        <a href="{{ url_for('add_recipe') }}" class="btn">Add Recipe</a>
     </div>
-</div>
-{% endif %}
-
-{% else %}
-<!-- If User has not added any recipes this message will display -->
-<div class="container center-align no-recipes">
-    <h4>You have not added any new recipes!</h4>
-    <a href="{{ url_for('add_recipe') }}" class="btn">Add Recipe</a>
 </div>
 {% endfor %}
 {% endblock %}

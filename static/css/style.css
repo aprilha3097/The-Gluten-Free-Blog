@@ -10,6 +10,10 @@ body, html {
     padding: 0 2%;
 }
 
+.header-logo {
+    font-size: 2em;
+}
+
 /* -- Hero Image and Caption-- */
 .hero-container {
     padding: 10px;
@@ -54,6 +58,11 @@ body, html {
 .hero-caption
 h2 {
     margin: 0 auto;
+    font-size: 2em;
+}
+
+.hero-btn {
+    font-size: .75em;
 }
 
 /* -- Who we are -- */
@@ -222,3 +231,11 @@ table, tr, td {
 .recipe-cards {
     height: 300px;
 }
+
+/*-- Media Queries 
+@media screen and (min-width: 280px) and (max-width: 599px) {
+    .hero-caption
+    h2 {
+        font-size: 1em;
+    }
+}-- */

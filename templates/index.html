@@ -9,7 +9,7 @@
             <h2>Welcome!</h2>
             <p>Remember to add your favorite recipes to your Cookbook</p>
             <!---Redirect User to Registration Page -->
-            <a href="{{ url_for('cookbook') }}" class="btn"> My Cookbook</a>
+            <a href="{{ url_for('cookbook') }}" class="btn hero-btn"> My Cookbook</a>
         </div>
     </div>
     {% else %}
@@ -19,7 +19,7 @@
             <h2>Welcome!</h2>
             <p>Sign up now to join the community of Gluten Free Cheifs!</p>
             <!---Redirect User to Registration Page -->
-            <a href="{{ url_for('register') }}" class="btn">Register Now</a>
+            <a href="{{ url_for('register') }}" class="btn hero-btn">Register Now</a>
         </div>
     </div>
     {% endif %}

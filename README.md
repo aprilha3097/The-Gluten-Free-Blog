@@ -182,41 +182,97 @@ Users
 You can view more in depth the testing required for this project in the following documentation: Testing Document
 
 ## Deployment
-#### To deploy The Gluten Free Cookbook with Github Pages, follow these steps:
 
-1. When accessing Github, scroll to the top of the repository
-2. From the top horizontol menu, select <strong>Settings</strong>
-3. Select <strong>Options</strong> on the left menu if not already selected
-4. Scroll down to the <strong>GitHub Pages</strong> section
-5. Under <strong>Source</strong> select the <strong>Master branch</strong>
-6. On selecting the <strong>Master branch</strong> the page will automtically refresh, with the site now deployed
-7. The link to access the deployed site will be at the top of the <strong>GitHub Pages</strong> section
+*The Gluten Free Cookbook* was developed using GitPod, using GitHub to host the repository.
 
-It can take up to 20 minutes for changes to the site to be published after pushing to GitHub. For more information on deploying your site with GitHub Pages, go [here](https://help.github.com/en/github/working-with-github-pages/creating-a-github-pages-site)
+### Cloning *Scribbles* from GitHub ###
 
-#### How to Clone Porject
+**Make sure you have an account at [MongoDB](https://www.mongodb.com/) in order to construct the database.**
 
-1. On the [repository page](https://github.com/aprilha3097/BlackJack), click on the Clone or Download button
+1: **Clone** the *The Gluten Free Cookbook* repository by downloading from [source](#),
 
-    <img src="https://github.com/aprilha3097/BlackJack/blob/master/README_imgs/button.png" width="400">
+2: **Navigate** to this folder in your terminal window and **install** required modules to run the application using the following command:
 
-2. To clone the site with HTTPS, copy the following URL
+```bash
+python -m pip -r requirements.txt
+```
 
-    <img src="https://github.com/aprilha3097/BlackJack/blob/master/README_imgs/clone_or_download.png" width="400">
+3: **Initialize** virtual environment by typing the following command into the terminal:
 
-3. Open Terminal and change the directory to where you want the cloned directory to be
-4. Type git clone and then paste the previous URL from earlier into your terminal
+```
+py -m venv virtual
+```
 
-    <img src="https://github.com/aprilha3097/BlackJack/blob/master/README_imgs/git_clone.png" width="500">
+4: In MongoDB, create a new database called *gfOnlineCookbook* with two collections: *users* and *recipes*.
 
-5. Press Enter to download all of the material from the respository locally to your machine 
+5: Create a file to hold your environment variables and call it *env.py*.
 
-For more information on cloning repositories, go [here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+5: Your env.py file should contain the following:
 
+```
+import os
 
-How to Deploy to heroku
-1. Login to Heroku and Create a new application
-2. Create requirements.txt field
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("PORT", "5000")
+os.environ.setdefault("SECRET_KEY", "YOUR_SECRET_KEY")
+os.environ.setdefault("MONGO_URI", "YOUR_MONGODB_URI")
+os.environ.setdefault("MONGO_DBNAME", "YOUR_DATABASE_NAME")
+os.environ.setdefault("DEBUG", "1")
+```
+
+- Please make sure you update your **SECRET_KEY**, **password**, **database_name**, and **DATABASE_NAME**.
+
+- Before pushing the project to a public repository, your env.py file should be added to .gitignore.
+
+6: You can now run your application locally by typing the following command in your terminal:
+
+```
+python run.py
+```
+
+### Deploying The Gluten Free Cookbook to Heroku ###
+
+1: **Login** to Heroku and create a new app.
+
+2: **Create** a requirements.txt file using the following command:
+
+```
+pip3 freeze --local > requirements.txt
+```
+
+3: **Create** a Procfile with the following command:
+
+```
+echo web: python run.py > Procfile
+```
+
+4: **Push** these newly created files to your repository master.
+
+5: **Add heroku remote** to your git repository by getting the heroku git URL from the heroku account settings. Then type the following: 
+
+```
+git remote add heroku https://git.heroku.com/your-heroku-repo
+```
+
+6: Push *The Gluten Free Cookbook* to your heroku:
+
+```
+git push heroku master
+```
+
+7: In your heroku app, **set** the following variables:
+
+**Key**|**Value**
+:-----:|:-----:
+HOSTNAME|0.0.0.0
+PORT|5000
+MONGO_URI|YOUR_MONGODB_URI
+SECRET_KEY|YOUR_SECRET_KEY
+
+  ** Please make sure you enter your own *SECRET_KEY*, and *MONGO_URL*.
+
+8: Click the deploy button on the Heroku dashboard.
+9: The site has been deployed the Heroku.
 
 
 ### Credit

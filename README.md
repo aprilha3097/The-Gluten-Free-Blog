@@ -182,7 +182,7 @@ Users
     * Sourced fonts required for site
 
 ### Testing 
-You can view more in depth the testing required for this project in the following documentation: [Testing Document}()
+You can view more in depth the testing required for this project in the following documentation: [Testing Document](https://github.com/aprilha3097/The_Gluten_Free_Cookbook/blob/master/wireframes/testing/TestingDoc.png)
 
 ## Deployment
 

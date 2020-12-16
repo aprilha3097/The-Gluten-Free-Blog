@@ -185,11 +185,11 @@ You can view more in depth the testing required for this project in the followin
 
 *The Gluten Free Cookbook* was developed using GitPod, using GitHub to host the repository.
 
-### Cloning *Scribbles* from GitHub ###
+### Cloning *The Gluten Free Cookbook* from GitHub ###
 
 **Make sure you have an account at [MongoDB](https://www.mongodb.com/) in order to construct the database.**
 
-1: **Clone** the *The Gluten Free Cookbook* repository by downloading from [source](#),
+1: **Clone** the *The_Gluten_Free_Cookbook* repository by downloading from [source](https://github.com/aprilha3097/The_Gluten_Free_Cookbook.git),
 
 2: **Navigate** to this folder in your terminal window and **install** required modules to run the application using the following command:
 
@@ -254,7 +254,7 @@ echo web: python run.py > Procfile
 git remote add heroku https://git.heroku.com/your-heroku-repo
 ```
 
-6: Push *The Gluten Free Cookbook* to your heroku:
+6: Push *The_Gluten_Free_Cookbook* to your heroku:
 
 ```
 git push heroku master

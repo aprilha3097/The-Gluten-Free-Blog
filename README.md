@@ -9,19 +9,14 @@ gluten free lovers.
 Users are able to view recipes, whether a registered user or not. But, if you want to get the full community access,
 users are able to register as a member and then are able to create and share their own recipes.
 
-## Table of Contents
-- [UX](#UX and Elements of User Experiences)
-  - [Project Goals](#project-goals)
-
-
 ## UX and Elements of User Experiences
 
 ### Strategy: 
-The purpose of this site is to provide a single place for users to view and add their favorite gluten free recipes
+The purpose of this site is to provide a single place for users to view and add their favorite gluten free recipes.
 
 ### Scope:
 Functional Requirements
-- The site is easy to navigate with a simple naviagation bar at top, a footer and links throughout the page to redirect users to correct page
+- The site is easy to navigate with a simple naviagation bar at top, a footer and links throughout the page to redirect users to their desired page
 - The design of the site is simple, nothing too complicating or visually unappealing
 
 Content Requirements
@@ -33,22 +28,23 @@ Information Architecture: Visual representation of the product's infustructure
 <img src="https://github.com/aprilha3097/The-Gluten-Free-Blog/blob/master/wireframes/flowchart/Information%20Architecture.png" width="600">
 
 - When user enters site, the hero container will welcome, introduce and redirect user to Register for a new account
-- When user scrolls through the home page, details of the site's purpose are explained
-- If user selects on the example recipes, they will be redirected to the View Recipes page to preview existing recipes
+- When user scrolls through the home page, details of the sites purpose are explained
+- If user selects on the example recipes, they will be redirected to the 'View Recipes' page to preview existing recipes
+- The navigation bar will include directions to the About, View Recipes, Login and Register pages for users that are not registered 
 
-- Navigation Bar will include directions to the About, View Recipes, Login and Register pages
-- View Recipes - Users will preview existing recipes. They will be able to select a recipe to view
-    * Registered users are able to edit and delete their own recipe
+- View Recipes - Users will preview existing recipes. They will be able to select a recipe to view in full detail
+    * Registered users are able to edit and delete their own recipes
+
 - Login - Users will be able to log into their personal accounts via a simple form 
-    * If user is not registered, they can easily redirect themselves to the Registration page
-    * If user incorrectly enters their username or password they will be promted with a message that what they entered is incorrectly
-    * when user registers successfully, they will be redirected to the Home page with new page links visable
+    * If user is not registered, they can easily redirect themselves to the Sign Up page
+    * If user incorrectly enters their username or password they will be promted with a message that what they entered is incorrect
+    * When user logs in successfully, they will be redirected to the Home page with new page links visable
 
 - Register - Users will be able to register for a new account via a simple form
     * If users are already registered they can easily redirect to the Login page
     * When user is able to register successfully, they will be redirected to the Home page with new page links visable
-- Navagation Link for registered users will containe About, View Recipes, Add Recipe, My Cookbook and SignOut
 
+- Navagation links for registered users will contain the About, View Recipes, Add Recipe, My Cookbook and SignOut pages
 
 ### Skeleton
 
@@ -57,28 +53,38 @@ Information Architecture: Visual representation of the product's infustructure
 
 Home Page:
 
-<img src="https://github.com/aprilha3097/The-Gluten-Free-Blog/blob/master/wireframes/site-wireframes/home.png" width="500">
+
+<img src="https://github.com/aprilha3097/The-Gluten-Free-Blog/blob/master/wireframes/site-wireframes/home.png" width="400">
+
 
 About Page:
 
-<img src="https://github.com/aprilha3097/The-Gluten-Free-Blog/blob/master/wireframes/site-wireframes/about.png" width="500">
+
+<img src="https://github.com/aprilha3097/The-Gluten-Free-Blog/blob/master/wireframes/site-wireframes/about.png" width="400">
+
 
 Adding & Editing Recipes Form:
 
-<img src="https://github.com/aprilha3097/The-Gluten-Free-Blog/blob/master/wireframes/site-wireframes/add_edit_recipes.png" width="500">
+
+<img src="https://github.com/aprilha3097/The-Gluten-Free-Blog/blob/master/wireframes/site-wireframes/add_edit_recipes.png" width="400">
+
 
 Login & Registration Form:
 
-<img src="https://github.com/aprilha3097/The-Gluten-Free-Blog/blob/master/wireframes/site-wireframes/login_register_form.png" width="500">
+
+<img src="https://github.com/aprilha3097/The-Gluten-Free-Blog/blob/master/wireframes/site-wireframes/login_register_form.png" width="400">
+
 
 Viewing Exiting Recipes:
 
-<img src="https://github.com/aprilha3097/The-Gluten-Free-Blog/blob/master/wireframes/site-wireframes/preview_recipes.png" width="500">
+
+<img src="https://github.com/aprilha3097/The-Gluten-Free-Blog/blob/master/wireframes/site-wireframes/preview_recipes.png" width="400">
+
 
 ### User Stories:
 - As a user, I want to preview the available recipes and select the recipe that I want to view
 - As a new user, I want to register as a member to the community for full access
-- As a current user, I want to log into my personal account to use all features of the site
+- As a registered user, I want to log into my personal account to use all features of the site
 - As a user, I want to view my portfolio of recipes that I have already added to the community
 - As a user, I want to amend details of a recipe that I have added 
 - As a user, I want to log out of my personal account once I have completed using the site
@@ -86,20 +92,21 @@ Viewing Exiting Recipes:
 ### Features: 
 
 #### Features Implemented
+
 Home Page: 
 - Navigation bar at top of page clearly labelled for easy use
 - Hero image that encourages users to register for a new account
-- Footer at bottom of pages with copyright information and footer naviagation to other links
+- Footer at bottom of pages with copyright information and footer naviagation to other pages
 
 Preview All Recipes:
-- User is able to search through existing recipes with 'View Recipe' button
+- User is able to search through existing recipes with Search Bar function
 - Users that have successfully logged in are able to edit their recipes by selecting the 'Edit Recipe' button
 - Users that have successfully logged in are able to delete their own recipes by selecting the 'Delete Recipe' button
 
 Login:
 - User is able to log into account using a simple form of 'Username' and 'Password'
 - User can submit form once details have been entered
-- If either Username or Password is incorrect - flash message will display and user will can re-enter details
+- If either Username or Password is incorrect - flash message will display and user can re-enter details
 - If either input fields are not filled in - an error will display to notify users to enter details in required input field
 - If user has not created an account, user can select 'Register Here' hyperlink to redirect to the Sign Up page
 
@@ -109,14 +116,12 @@ Register:
 - If either input fields are not filled in - an error will display to notify users to enter details in required input field
 - If user has already registered, user can select 'Log In Here' hyperlink to redirect to the Login Page
 
-
 #### Future Features to Implement
 - Users are able to like recipes and add these to a seperate section of their Cookbook 
 - Users are able to change their password
-- Site administraot - to monitor and remove any recipes that seem inapproriate for the sites purposes
-- Users that have an account would be able to leave comments/reviews of each of the recipes they liked of disliked
+- Site administrator - to monitor and remove any recipes that seem inapproriate for the sites purposes
+- Users that have an account would be able to leave comments/reviews of each of the recipes they liked or disliked
 - Users are able to add a URL image to recipes that they are adding
-
 
 ### Database design
 
@@ -138,8 +143,6 @@ Users
 | ------------------------- |:----------------------:| :---------:|
 | Username                  | username               | String     |
 | Password                  | password               | String     |
-
-
 
 
 ## Technologies Used
@@ -179,7 +182,7 @@ Users
     * Sourced fonts required for site
 
 ### Testing 
-You can view more in depth the testing required for this project in the following documentation: Testing Document
+You can view more in depth the testing required for this project in the following documentation: [Testing Document}()
 
 ## Deployment
 

@@ -232,11 +232,3 @@ table, tr, td {
 .recipe-cards {
     height: 300px;
 }
-
-/*-- Media Queries 
-@media screen and (min-width: 280px) and (max-width: 599px) {
-    .hero-caption
-    h2 {
-        font-size: 1em;
-    }
-}-- */

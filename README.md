@@ -1,6 +1,6 @@
 # The Gluten Free Cookbook
 
-Milestone Project # 3 - The Gluten Free Cookbook
+Milestone Project # 3 - [The Gluten Free Cookbook](https://the-gluten-free-cookbook.herokuapp.com/)
 
 The purpose of the site is to create a community for those who feel restricted to the Gluten Free diet. Some by choice,
 but others as a dietary requirement. The site is to share your favorite gluten free recipes, creating a community of other
@@ -186,7 +186,7 @@ You can view more in depth the testing required for this project in the followin
 
 ## Deployment
 
-*The Gluten Free Cookbook* was developed using GitPod, using GitHub to host the repository.
+*The Gluten Free Cookbook* was developed using GitPod and using GitHub to host the repository.
 
 ### Cloning *The Gluten Free Cookbook* from GitHub ###
 
@@ -220,10 +220,7 @@ os.environ.setdefault("PORT", "5000")
 os.environ.setdefault("SECRET_KEY", "YOUR_SECRET_KEY")
 os.environ.setdefault("MONGO_URI", "YOUR_MONGODB_URI")
 os.environ.setdefault("MONGO_DBNAME", "YOUR_DATABASE_NAME")
-os.environ.setdefault("DEBUG", "1")
 ```
-
-- Please make sure you update your **SECRET_KEY**, **password**, **database_name**, and **DATABASE_NAME**.
 
 - Before pushing the project to a public repository, your env.py file should be added to .gitignore.
 
@@ -271,12 +268,10 @@ HOSTNAME|0.0.0.0
 PORT|5000
 MONGO_URI|YOUR_MONGODB_URI
 SECRET_KEY|YOUR_SECRET_KEY
-
-  ** Please make sure you enter your own *SECRET_KEY*, and *MONGO_URL*.
+MONGO_DBNAME|YOUR_DATABASE_NAME
 
 8: Click the deploy button on the Heroku dashboard.
 9: The site has been deployed the Heroku.
-
 
 ### Credit
 
@@ -295,3 +290,4 @@ to clone the input the previous text values were copied as well from [Stack Over
 
 4. [Image of Cassarole](https://www.eatingbirdfood.com/wp-content/uploads/2019/05/confetti-chicken-casserole-2.jpg)
 
+5. [Hero Image](https://www.deliciousalchemy.com/wp-content/uploads/2017/04/VictoriaSpongeDecorateBanner-3.jpg)

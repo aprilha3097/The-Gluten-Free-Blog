@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-
 <!-- Preview all Recipes -->
 <h4 class="center-align">View All Recipes</h4>
 
@@ -23,7 +22,9 @@
     </div>
 </div>
 
+<!-- Display each of the available recipes -->
 {% for recipe in recipes %}
+<!-- Display recipes either on the left or right side of page -->
 {% if loop.index % 2 != 0 %}
 <div class="container">
     <div class="row valign-wrapper">

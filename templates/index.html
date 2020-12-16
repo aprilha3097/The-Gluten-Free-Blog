@@ -2,6 +2,7 @@
 {% block content %}
 
 <header class="container hero-container">
+    <!-- If user has successfully logged in -->
     {% if session.user %}
     <div class="hero-image card col s10">
         <div class="hero-caption">
@@ -12,6 +13,7 @@
         </div>
     </div>
     {% else %}
+    <!-- If this is a guest user / not a registered user -->
     <div class="hero-image card col s10">
         <div class="hero-caption">
             <h2>Welcome!</h2>
@@ -23,6 +25,7 @@
     {% endif %}
 </header>
 
+<!-- Clear statement of three main things of sites purpose -->
 <section id="who-we-are" class="container">
     <h4 class="center-align">How do we work?</h4>
     <div class="row">
@@ -44,9 +47,10 @@
     </div>
 </section>
 
-<!-- Preview all Recipes -->
+<!-- Examples of Recipes that could be available -->
 <h4 class="center-align">See what you could be making next!</h4>
 <div class="container card-deck">
+    <!-- Example 1 -->
     <div class="card col m4">
         <a href="{{url_for('recipes') }}" class="card-link">
             <img class="card-img-top"
@@ -58,7 +62,8 @@
             </div>
         </a>
     </div>
-
+    
+    <!-- Example 2 -->
     <div class="card col m4">
         <a href="{{url_for('recipes') }}" class="card-link">
             <img class="card-img-top" src="https://therecipecritic.com/wp-content/uploads/2020/01/naan_bread_hero.jpg"
@@ -70,6 +75,7 @@
         </a>
     </div>
 
+    <!-- Example 3 -->
     <div class="card col m4">
         <a href="{{url_for('recipes') }}" class="card-link">
             <img class="card-img-top"

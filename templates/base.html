@@ -7,7 +7,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-    <!-- Materialize -->
+    <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
     <!-- Style Sheet -->
@@ -55,9 +55,9 @@
             {% endif %}
         </ul>
     </header>
-    <section>
 
-        <!-- Flash Messages will appear here -->
+    <section>
+        <!-- Flash Messages  -->
         {% with messages = get_flashed_messages() %}
         {% if messages %}
         {% for message in messages %}
@@ -67,13 +67,14 @@
         {% endfor %}
         {% endif %}
         {% endwith %}
-
     </section>
 
     <main>
         {% block content %}
         {% endblock %}
     </main>
+
+    <!-- Footer -->
     <footer class="page-footer blue lighten-1">
         <div class="container">
             <div class="row">
@@ -111,5 +112,4 @@
     {% block scripts %}
     {% endblock %}
 </body>
-
 </html>

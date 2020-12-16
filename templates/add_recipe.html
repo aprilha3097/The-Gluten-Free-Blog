@@ -2,35 +2,38 @@
 {% block content %}
 
 <h3 class="center-align">Add a Recipe</h3>
+<!-- Form to Add a New Recipe -->
 <div class="container">
-<div class="row card-panel">
-	<form class="col s12" method="POST" action="#">
-        <!-- recipe name -->
-		<div class="row">
-			<div class="input-field col s12">
-				<input id="recipe_name" name="recipe_name" minlength="5" maxlength="50"
-                type="text" class="validate" required>
-				<label for="recipe_name">Recipe Name</label>
-			</div>
-		</div>
+    <div class="row card-panel">
+        <form class="col s12" method="POST" action="#">
 
-        <!-- recipe description -->
-		<div class="row">
-			<div class="input-field col s12">
-				<textarea id="recipe_description" name="recipe_description" minlength="5" class="materialize-textarea validate" required></textarea>
-				<label for="recipe_description">Description</label>
-			</div>
-		</div>
+            <!-- Add Recipe Name -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50" type="text" class="validate"
+                        required>
+                    <label for="recipe_name">Recipe Name</label>
+                </div>
+            </div>
 
-        <!-- recipe serving size -->
-		<div class="row">
-			<div class="input-field col s12">
-                <input type="number" id="serves" name="serves" min="01" max="10">
-                <label for="serves">Serves (range from 0 to 10)</label>
-			</div>
-		</div>
+            <!-- Add Recipe Description -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="recipe_description" name="recipe_description" minlength="5"
+                        class="materialize-textarea validate" required></textarea>
+                    <label for="recipe_description">Description</label>
+                </div>
+            </div>
 
-        <!-- recipe total time -->
+            <!-- Add Recipe Serving Size -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <input type="number" id="serves" name="serves" min="01" max="10">
+                    <label for="serves">Serves (range from 0 to 10)</label>
+                </div>
+            </div>
+
+            <!-- Add Recipe Total Time -->
             <div class="row">
                 <div class="input-field col s12">
                     <input type="time" id="time" name="time" class="form-control validate" required>
@@ -38,47 +41,49 @@
                 </div>
             </div>
 
-        <!-- recipe ingredients -->
-    <h6 class="center-align">Add your ingredients</h6>
-	<div class="row">
-        <div class="input-fieldcol s12 repeatable">
-            <table>
-                <tr>
-                    <td>
-                        <input type="text" name="ingredients" id="ingredients" minlength="5"
-                        maxlength="200" class="materialize-textarea validate">
-                    </td>
-                </tr>
-            </table>
-            <button type="button" class="btn btn-primary btn-sm repeat">Add Another Ingredient</button>
-        </div>
+            <!-- Add Recipe Ingredients -->
+            <!-- repeatable onclick function from stackoverflow -->
+            <h6 class="center-align">Add your ingredients</h6>
+            <div class="row">
+                <div class="input-fieldcol s12 repeatable">
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="text" name="ingredients" id="ingredients" minlength="5" maxlength="200"
+                                    class="materialize-textarea validate">
+                            </td>
+                        </tr>
+                    </table>
+                    <button type="button" class="btn btn-primary btn-sm repeat">Add Another Ingredient</button>
+                </div>
+            </div>
+
+            <!-- Add Recipe Directions -->
+            <!-- repeatable onclick function from stackoverflow -->
+            <h6 class="center-align">Add your directions</h6>
+            <div class="row">
+                <div class="input-field col s12 repeatable">
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="text" name="directions" id="directions" minlength="5"
+                                    class="materialize-textarea validate">
+                            </td>
+                        </tr>
+                    </table>
+                    <button type="button" class="btn btn-primary btn-sm repeat">Add Another Direction</button>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="col s12 center-align">
+                <button type="submit" class="btn-large light-blue darken-1 text-shadow">
+                    Add Recipe
+                </button>
+            </div>
+
+        </form>
     </div>
-
-        <!-- recipe directions -->
-        <!-- repeatable onclick function from stackoverflow -->
-	<h6 class="center-align">Add your directions</h6>
-    <div class="row">
-        <div class="input-field col s12 repeatable">
-            <table>
-                <tr>
-                    <td>
-                        <input type="text" name="directions" id="directions" minlength="5"
-                        class="materialize-textarea validate">
-                    </td>
-                </tr>
-            </table>
-            <button type="button" class="btn btn-primary btn-sm repeat">Add Another Direction</button>
-        </div>
-    </div>
-
-        <!-- submit button -->
-        <div class="col s12 center-align">
-            <button type="submit" class="btn-large light-blue darken-1 text-shadow">
-                Add Recipe
-            </button>
-        </div>
-
-	</form>
 </div>
-</div>
+
 {%  endblock %}

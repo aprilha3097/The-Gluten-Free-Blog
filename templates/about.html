@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!-- Mission Statement -->
 <section class="container about">
     <div class="mission">
         <h5>Our Mission</h5>
@@ -10,12 +11,13 @@
             we wanted to ensure that being on a gluten free diet should not be a restriction. We are here for you! We
             love food and cooking great food. Being Gluten Free should not stop
             us from cooking the food we love!
-        </p>    
+        </p>
     </div>
+    <!-- Button to redirect to Sign Up page-->
     <div class="container about-button center-align">
         <a href="{{ url_for('register') }}" class="btn btn-primary">Register Now!</a>
     </div>
-
+    <!-- Message from Founders -->
     <div class="founders">
         <img src="https://i.pinimg.com/originals/cb/22/de/cb22deb9811d2b76411f7b79a160ba14.jpg" alt="">
         <h5>Our Founders</h5>
@@ -31,7 +33,6 @@
             from backgrounds that are gluten free.
             Let's Get Cooking!
         </p>
-
     </div>
 </section>
 

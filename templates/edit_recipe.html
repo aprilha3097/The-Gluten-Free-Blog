@@ -1,92 +1,99 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!-- User can Edit a recipe -->
 <h3 class="center-align">Edit Recipe</h3>
+
 <div class="container">
-<div class="row card-panel">
-	<form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
-        <!-- recipe name -->
-		<div class="row">
-			<div class="input-field col s12">
-				<input id="recipe_name" name="recipe_name" minlength="5" maxlength="50"
-                type="text" class="validate" value="{{ recipe.recipe_name }}" required>
-				<label for="recipe_name">Recipe Name</label>
-			</div>
-		</div>
-
-        <!-- recipe description -->
-		<div class="row">
-			<div class="input-field col s12">
-				<textarea id="recipe_description" name="recipe_description" minlength="5"
-                 maxlength="200" class="materialize-textarea validate" required>{{- recipe.recipe_description -}}</textarea>
-				<label for="recipe_description">Description</label>
-			</div>
-        </div>
-
-        <!-- recipe serving size -->
-		<div class="row">
-			<div class="input-field col s12">
-                <input type="number" id="serves" name="serves" min="01" max="10" value="{{ recipe.serves }}">
-                <label for="serves">Serves (range from 0 to 10)</label>
-			</div>
-		</div>
-
-        <!-- recipe total time -->
+    <div class="row card-panel">
+        <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
+            
+            <!-- Edit Recipe Name -->
             <div class="row">
                 <div class="input-field col s12">
-                    <input type="time" id="time" name="time" class="form-control validate" value="{{ recipe.time }}" required>
+                    <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50" type="text" class="validate"
+                        value="{{ recipe.recipe_name }}" required>
+                    <label for="recipe_name">Recipe Name</label>
+                </div>
+            </div>
+
+            <!-- Edit Recipe Description -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="recipe_description" name="recipe_description" minlength="5" maxlength="200"
+                        class="materialize-textarea validate" required>{{- recipe.recipe_description -}}</textarea>
+                    <label for="recipe_description">Description</label>
+                </div>
+            </div>
+
+            <!-- Edit Recipe Serviing Size -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <input type="number" id="serves" name="serves" min="01" max="10" value="{{ recipe.serves }}">
+                    <label for="serves">Serves (range from 0 to 10)</label>
+                </div>
+            </div>
+
+            <!-- Edit Recipe Cooking Time -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <input type="time" id="time" name="time" class="form-control validate" value="{{ recipe.time }}"
+                        required>
                     <label for="time">Total Time (HH:MM)</label>
                 </div>
             </div>
 
-        <!-- recipe ingredients -->
-    <h6 class="center-align">Add your ingredients</h6>
-	<div class="row">
-        <div class="input-field col s12 repeatable">
-            {% for ingredient in recipe.ingredients %}
-            <table>
-                <tr>
-                    <td>
-                        <input type="text" name="ingredients" id="ingredients" minlength="5"
-                        maxlength="200" class="materialize-textarea validate" value="{{ ingredient }}" required>
-                    </td>
-                </tr>
-            </table>
-            {% endfor %}
-            <button type="button" class="btn btn-sm repeat">Add Another Ingredient</button>
-        </div>
+            <!-- Edit Recipe Ingredients -->
+            <!-- repeatable onclick function from stackoverflow -->
+            <h6 class="center-align">Add your ingredients</h6>
+            <div class="row">
+                <div class="input-field col s12 repeatable">
+                    <!-- Display each of the ingredients in ingredients array -->
+                    {% for ingredient in recipe.ingredients %}
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="text" name="ingredients" id="ingredients" minlength="5" maxlength="200"
+                                    class="materialize-textarea validate" value="{{ ingredient }}">
+                            </td>
+                        </tr>
+                    </table>
+                    {% endfor %}
+                    <button type="button" class="btn btn-sm repeat">Add Another Ingredient</button>
+                </div>
+            </div>
+
+            <!-- Edit Recipe Directions -->
+            <!-- repeatable onclick function from stackoverflow -->
+            <h6 class="center-align">Add your directions</h6>
+            <div class="row">
+                <div class="input-field col s12 repeatable">
+                    <!-- Display each of the directions from directions array -->
+                    {% for direction in recipe.directions %}
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="text" name="directions" id="directions" minlength="5" maxlength="200"
+                                    class="materialize-textarea validate" value="{{ direction }}">
+                            </td>
+                        </tr>
+                    </table>
+                    {% endfor %}
+                    <button type="button" class="btn btn-sm repeat">Add Another Direction</button>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="col s12 center-align">
+                <a href="{{ url_for('recipes') }}" class="btn red">
+                    Cancel
+                </a>
+                <button type="submit" class="btn">
+                    Edit Recipe
+                </button>
+            </div>
+
+        </form>
     </div>
-
-        <!-- recipe directions -->
-        <!-- repeatable onclick function from stackoverflow -->
-	<h6 class="center-align">Add your directions</h6>
-    <div class="row">
-        <div class="input-field col s12 repeatable">
-            {% for direction in recipe.directions %}
-            <table>
-                <tr>
-                    <td>
-                        <input type="text" name="directions" id="directions" minlength="5"
-                        maxlength="200" class="materialize-textarea validate" value="{{ direction }}" required>
-                    </td>
-                </tr>
-            </table>
-            {% endfor %}
-            <button type="button" class="btn btn-sm repeat">Add Another Direction</button>
-        </div>
-    </div>
-
-        <!-- submit button -->
-        <div class="col s12 center-align">
-            <a href="{{ url_for('recipes') }}" class="btn red">
-                Cancel
-            </a>
-            <button type="submit" class="btn">
-                Edit Recipe
-            </button>
-        </div>
-
-	</form>
-</div>
 </div>
 {%  endblock %}
